@@ -36,7 +36,7 @@ body {
 
 header {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
   border-bottom: 0.4rem solid var(--corCinzaBGeLinha);
 }
 
@@ -50,6 +50,7 @@ header {
 #todoForm,
 #editForm {
   margin-bottom: 2.2rem;
+  padding: 1rem 0 1.5rem 0;
 }
 
 .formControl {
@@ -57,6 +58,8 @@ header {
   align-items: center;
   gap: 0.8rem;
 }
+
+
 
 /* form */
 h1 {
@@ -70,6 +73,7 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
+  max-width: 25rem;
 }
 
 /* botão de cancelar e os de icone */
@@ -79,10 +83,9 @@ button {
 
   border: 0.1rem solid var(--corAzulButton);
   border-radius: 0.3rem;
-  padding: 0.6rem 0.9rem;
+ 
   font-size: 2.1rem;
-  height: 3rem;
-
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +94,18 @@ button {
   transition: 0.4s;
 }
 
+
+i.fa-solid, .fa-thin {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #cancelEditButton {
   margin-top: 1.5rem;
+  padding: 0.6rem 0.9rem;
 }
 
 button i {
@@ -116,6 +129,9 @@ select {
   padding: 0.6rem 0.9rem;
   border-radius: 0.3rem;
   font-size: 1.3rem;
+ flex: 1;
+ border-bottom: 0.1rem solid var(--corAzulButton);
+ border-right: 0.1rem solid var(--corAzulButton);
 }
 
 input:hover,
@@ -124,23 +140,24 @@ select:hover,
 select:focus {
   outline: solid .3rem var(--corAzulButton);
 }
-/* 
+
 .hide {
     display: none;
-} */
+}
 
 /* tool bar */
 
 #toolBar {
-  padding: 1rem 1.5rem 1rem 1rem;
+  padding: 1rem 0 1.5rem 0;
   border-bottom: .1rem solid var(--corAzulButton);
-  
+  margin-bottom: 2rem;
+
   display: flex; 
-  justify-content: space-between;
+  
 }
 
 #search {
-  padding-right: 3.5rem;
+  padding-right: 2rem;
   border-right: .1rem solid var(--corCinzaBGeLinha);
 }
 
@@ -150,4 +167,41 @@ select:focus {
   align-items: center;
 
   gap: 0.8rem;
+}
+
+#filter {
+  padding-left: 2rem;
+}
+
+#filterSelect {
+  width: 14rem;
+}
+
+@media screen and (max-width: 450px) {
+  #filterSelect {
+    max-width: 11rem;
+  }
+}
+
+#filterSelect option {
+  font-size: 1.4rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.5rem 1.5rem 1rem;
+  border-bottom: .1rem solid var(--corAzulButton);
+  margin-bottom: 2rem;
+}
+
+.done {
+  background-color: var(--corAzulButton);
+}
+
+.done h3 {
+  color: white;
+  text-decoration: line-through;
+  font-style: italic;
 }

@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script src="js/main.js" defer></script>
     <title>O que fazer?</title>
   </head>
   <body>
@@ -65,30 +65,15 @@
           <div id="filter">
             <h2>Filtrar:</h2>
             <select id="filterSelect">
-              <option value="all" class="optionSelect">Todos</option>
+              <option value="all" class="optionSelect">Todas</option>
               <option value="done" class="optionSelect">Para fazer</option>
               <option value="todo" class="optionSelect">Completas</option>
             </select>
           </div>
         </div>
 
-        <div id="todoList">
-          <div class="todo">
-            <h3>Estou fazendo alguma coisa..</h3>
-
-            <button class="finishTodo">
-              <i class="fa-solid fa-check"></i>
-            </button>
-            <button class="editTodo">
-              <i class="fa-solid fa-pen"></i></button
-            ><button class="removeTodo">
-              <i class="fa-solid fa-xmark"></i>
-            </button>
-          </div>
-        </div>
+        <div id="todoList"></div>
       </main>
-
     </div>
-    <script src="js/main.js"></script>
   </body>
 </html>
